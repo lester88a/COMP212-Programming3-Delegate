@@ -31,7 +31,8 @@ namespace Delegate
             WriteOutput("harry", new UpperCaseDelegate(UpperCaseAll));
         }
         //example
-        delegate string UpperCaseDelegate(string input);
+        delegate string UpperCaseDelegate(string input);//type declaration
+        //method 1 UpperCaseFirst
         static string UpperCaseFirst(string input)
         {
             char[] buffer = input.ToCharArray();
@@ -53,5 +54,6 @@ namespace Delegate
             Console.WriteLine("your string before:{0}", input);
             Console.WriteLine("your string after:{0}", del(input));
         }
+        //method return type must match the delegate type
     }
 }
